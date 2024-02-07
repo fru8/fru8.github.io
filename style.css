@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2");
+
+body {
+   overflow:hidden;
+   -webkit-font-smoothing: antialiased;
+}
+
+* {
+  cursor: none;
+}
+
+.demo__info {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 65%;
+    font-family: "Press Start 2P", normal;
+  text-align: right;
+  right: 10px;
+  padding: 0.5em;
+  z-index: 100;
+  color: ;
+  opacity:70%;
+  z-index:999;
+}
+
+.demo__info a {
+  color: white;
+    font-family: "Press Start 2P", normal;
+  text-decoration:none;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+  z-index:999;
+}
+
+
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.coop {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  padding: 7px;
+  animation: floatUpDown 1s infinite;
+  z-index: 3;
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+.coop:hover {
+    animation: floatUpDown .5s infinite;
+  transform: scale(1.02); /* Scale by 2% in all directions on hover */
+}
+
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: max(100vh, 57vw);
+  width: max(100vw, 178vh);
+  background-color: rgb(236, 240, 233);
+  margin: 0px;
+}
+
+#play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; /* 150% larger than the original width */
+  height: 150px; /* 150% larger than the original height */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Elliptical shape */
+  font-size: 8px; /* Adjust the font size */
+  font-family: "Press Start 2P", normal;
+  background-color: #fff;
+  color: #000;
+  border-width: 5px;
+  border-color: #000;
+  transition: transform 0.3s ease;
+  text-align: center;
+  line-height: -0.5; /* Adjust line-height for vertical centering */
+}
+
+#play-button:hover {
+  animation: wobble 0.5s ease infinite; /* Apply the wobbling animation on hover */
+  cursor:none;
+}
+
+@keyframes wobble {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  15% { transform: translate(-50%, -50%) rotate(-5deg); }
+  30% { transform: translate(-50%, -50%) rotate(5deg); }
+  45% { transform: translate(-50%, -50%) rotate(-3deg); }
+  60% { transform: translate(-50%, -50%) rotate(3deg); }
+  75% { transform: translate(-50%, -50%) rotate(-2deg); }
+  90% { transform: translate(-50%, -50%) rotate(2deg); }
+}
+
+@keyframes crackAnimation {
+  to {
+    background: linear-gradient(to bottom, #fff 0%, #fff 50%, #ccc 50%, #ccc 100%);
+    opacity: 0;
+  }
+}
+
+#play-button.crack {
+  opacity: 1;
+  transition: opacity 0.5s ease-out; /* Add a transition for a smooth fade-out effect */
+}
+
+#play-button.crack.fade-out {
+  opacity: 0;
+}
+
+.sunny-side-up-egg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; /* Adjust the size as needed */
+  height: 120px; /* Adjust the size as needed */
+  background-color: #FDF5E6; /* Egg white color */
+  border-radius: 50%;
+  border: 5px solid black; /* Add black border */
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.sunny-side-up-egg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px; /* Adjust the size as needed */
+  height: 45px; /* Adjust the size as needed */
+  background-color: #FFD700; /* Yolk color */
+  border-radius: 50%;
+}
+
+
+
+
+
+.landing-content {
+  font-family: "Press Start 2P", normal;
+  color: #fff;
+  z-index: 2;
+}
+.landing-content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page {
+  display: none;
+  background-image: url("https://cdn.discordapp.com/attachments/1199906798354845779/1204497451038408704/Intro_Page.gif?ex=65d4f2aa&is=65c27daa&hm=74f643049fbf4a452ec635eb5ac99c4afb1b3411a35334be9aadeadb83911b3c&");
+  background-size: cover; /* Fill the entire page, maintaining aspect ratio */
+  background-position: center; /* Center the background horizontally and vertically */
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure full viewport height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  padding-top: 10px; /* Add 10px gap at the top */
+  padding-right: 10px;
+  height: 50px;
+  width: 100%;
+  background-color: #;
+  position: relative;
+  z-index: 2;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
