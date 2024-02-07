@@ -125,6 +125,7 @@
   }
   50% {
     transform: translateY(-3px);
+
   }
   100% {
     transform: translateY(0);
@@ -137,11 +138,26 @@ html {
   user-select: none; /* Standard syntax */
 }
 
-body {
 
-  font-family: "Press Start 2P", normal;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('https://cdn.discordapp.com/attachments/887521357548638249/1204492780567527534/Intro_Page.gif?ex=65d4ee51&is=65c27951&hm=12cf6bed2685613aad39b3c01a95c0c495872d1892075a6b593195e5b8bfb899&'); /* Replace with the path to your GIF */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Press Start 2P", sans;
   overflow:hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+.content {
+  text-align: center;
 }
 
 * {
@@ -158,7 +174,6 @@ body {
  right: 10px;
  padding: 0.5em;
  z-index: 100;
- color: ;
  opacity:70%;
  z-index:999;
 }
