@@ -1,0 +1,178 @@
+
+.nav {
+  padding-top: 10px; /* Add 10px gap at the top */
+  padding-right: 10px;
+  height: 50px;
+  width: 100%;
+  position: fixed; /* Change from relative to fixed */
+  top: 0; /* Stick it to the top */
+  right: 0; /* Align it to the right */
+  z-index: 2;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.coop {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+  padding: 7px;
+  animation: floatUpDown 1s infinite;
+  z-index: 3;
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+.coop:hover {
+    animation: floatUpDown .5s infinite;
+  transform: scale(1.02); /* Scale by 2% in all directions on hover */
+}
+
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+body {
+
+  font-family: "Press Start 2P", normal;
+  overflow:hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+ cursor: none;
+}
+
+.demo__info {
+ position: fixed;
+ width: 100%;
+ bottom: 0;
+ font-size: 65%;
+   font-family: "Press Start 2P", normal;
+ text-align: right;
+ right: 10px;
+ padding: 0.5em;
+ z-index: 100;
+ color: ;
+ opacity:70%;
+ z-index:999;
+}
+
+.demo__info a {
+ color: white;
+   font-family: "Press Start 2P", normal;
+ text-decoration:none;
+ display: inline-block;
+ position: relative;
+ z-index: 1;
+ padding: 2em;
+ margin: -2em;
+ z-index:999;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2");
