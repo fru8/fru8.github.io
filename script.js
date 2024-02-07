@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         // Preload the landing page background image
         const landingPageImage = new Image();
-        landingPageImage.src = 'https://cdn.discordapp.com/attachments/172555033429278722/1201779591174430740/IntroPage-ezgif.com-overlay.gif?ex=65d449f6&is=65c1d4f6&hm=102f8e18c003b18151a13ac74aec06d43d11aaaf40118c3777fc83793d0ca7b6&';
+        landingPageImage.src = 'https://cdn.discordapp.com/attachments/1199906798354845779/1204497451038408704/Intro_Page.gif?ex=65d4f2aa&is=65c27daa&hm=74f643049fbf4a452ec635eb5ac99c4afb1b3411a35334be9aadeadb83911b3c&';
 
         playButton.addEventListener('click', function () {
             playButton.style.pointerEvents = 'none'; // Disable further clicks on the button
